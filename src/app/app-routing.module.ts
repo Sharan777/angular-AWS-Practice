@@ -4,17 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { SigninComponent } from './user/signin/signin.component';
 import { SignupComponent } from './user/signup/signup.component';
 import { CompareComponent } from './compare/compare.component';
-import { AuthGuardService } from './user/auth-guard.service';
+import { AuthGuard } from './user/auth-guard.service';
 
 const routes: Routes = [
   { path: '', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'compare', canActivate: [AuthGuardService], component: CompareComponent },
+  { path: 'compare', canActivate: [AuthGuard], component: CompareComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AuthGuardService]
+  providers: [AuthGuard]
 })
 export class AppRoutingModule {}
