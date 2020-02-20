@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompareService } from './compare.service';
 
 @Component({
   selector: 'app-compare',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompareComponent implements OnInit {
 
-  constructor() { }
-
+  doInput = true;
+  constructor(private compareService: CompareService) {}
   ngOnInit() {
-  }
+    this.compareService.dataEdited.subscribe(
+      (edited: boolean) => this.doInput = !edited
+    );
+  } 
 
 }
