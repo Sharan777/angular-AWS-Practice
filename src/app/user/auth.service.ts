@@ -16,8 +16,8 @@ import {
 import { User } from './user.model';
 
 const POOL_DATA = {
-  UserPoolId: 'POOL_ID',
-  ClientId: 'APP_CLIENT_ID'
+  UserPoolId: 'us-east-2_uidPhTg43',
+  ClientId: '7vboellbit8selopbjtuk0cjob'
 };
 const userPool = new CognitoUserPool(POOL_DATA);
 

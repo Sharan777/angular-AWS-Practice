@@ -36,6 +36,7 @@ export class CompareInputComponent implements OnInit {
       height: this.form.value.height as number,
       income: this.form.value.income as number
     };
+    console.log(data)
     this.compareService.onStoreData(data);
   }
 
