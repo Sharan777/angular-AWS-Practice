@@ -27,7 +27,7 @@ export class CompareService {
       if (err) {
         return;
       }
-      this.http.post('https://API_ID.execute-api.REGION.amazonaws.com/dev/compare-yourself', data, {
+      this.http.post('https://oyqhv95q2h.execute-api.us-east-2.amazonaws.com/dev/compare-yourself', data, {
         headers: new Headers({'Authorization': session.getIdToken().getJwtToken()})
       })
         .subscribe(
